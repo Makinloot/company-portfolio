@@ -1,18 +1,24 @@
+import { motion } from "framer-motion";
+
 // eslint-disable-next-line react/prop-types
 export default function AnimatedLink({ active, value, delay }) {
+  const variants = {
+    active: { opacity: 1, y: 0 },
+    inactive: { opacity: 0, y: "-100%" },
+  };
   return (
-    <li
-      className={`${
-        active ? "text-[4.5rem]" : "text-[0rem] delay-100"
-      } delay-[${delay}ms] transition-all duration-300`}
+    <motion.li
+      animate={active ? "active" : "inactive"}
+      variants={variants}
+      transition={{ delay: active ? delay : 0.2 }}
+      className={""}
     >
       <a
         href="#"
-        // className="capitalize text-[4.5rem] hover:text-white transition-all duration-300 text-pinkDark"
-        className={`capitalize hover:text-white text-pinkDark`}
+        className={`capitalize text-[4.5rem] hover:text-white text-pinkDark`}
       >
         {value}
       </a>
-    </li>
+    </motion.li>
   );
 }

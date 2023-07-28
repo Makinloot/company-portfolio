@@ -10,7 +10,9 @@ function App() {
     <div className="App font-circular text-blackPrimary">
       <Header handleMenu={handleMenu} active={showMenu} />
       <Hero />
-      <NavMenu active={showMenu} />
+      <div className="container relative">
+        <NavMenu active={showMenu} />
+      </div>
       <div className="h-[100vh] bg-red-400"></div>
     </div>
   );
