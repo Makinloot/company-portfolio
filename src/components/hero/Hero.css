@@ -14,9 +14,28 @@
   line-height: 1.5;
 }
 
-/* position: absolute;
-width: calc(50% - 12rem);
-height: auto;
-top: 50%;
-right: 12rem;
-transform: translateY(-50%); */
+@media (max-width: 1024px) {
+  .Hero-primary {
+    width: 100%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 60%;
+  }
+
+  .Hero-primary h2 {
+  }
+  .Hero-primary p {
+  }
+
+  .Hero-contact {
+    flex-direction: row-reverse;
+  }
+  .Hero-contact .companies {
+    display: none;
+  }
+  .Hero-contact button {
+  }
+}

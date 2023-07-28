@@ -13,6 +13,7 @@ export default {
       colors: {
         pinkPrimary: "#F74EA1",
         blackPrimary: "#373737",
+        pinkDark: "#b50d86",
       },
     },
   },

@@ -1,0 +1,14 @@
+.Menu-wrapper ul li {
+  line-height: 1.1;
+}
+.Menu-wrapper ul li a {
+  /* line-height: 1.1; */
+}
+
+.Menu-wrapper ul li a:hover {
+  color: white;
+}
+
+.logo {
+  transition: all 5s;
+}
