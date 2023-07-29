@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import AnimatedLink from "./AnimatedLink";
 import "./NavMenu.css";
 // eslint-disable-next-line react/prop-types
-export default function NavMenu({ active }) {
+export default function NavMenu({ active, setContact, contact }) {
   const variants = {
     active: { opacity: 1, x: 0 },
     inactive: { opacity: 0, x: "-100%" },
@@ -97,6 +97,7 @@ export default function NavMenu({ active }) {
                 </h3>
                 <hr className="h-20 w-[1px] bg-red-100 absolute left-1/2" />
                 <button
+                  onClick={() => setContact(!contact)}
                   style={{ letterSpacing: "0.1rem" }}
                   className="bg-pinkDark uppercase hover:bg-white hover:text-pinkPrimary transition-all duration-500 text-xs font-sofiaBold text-white py-5 px-9 rounded-full"
                 >

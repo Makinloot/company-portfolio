@@ -1,0 +1,26 @@
+/* @media (min-width: 100px) {
+  .Contact {
+    padding: 8rem 5rem !important;
+  }
+}
+@media (min-width: 600px) {
+  .Contact {
+    padding: 8rem 5rem !important;
+  }
+}
+@media (min-width: 800px) {
+  .Contact {
+    padding: 80rem 10rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Contact {
+    padding: 8rem 2rem !important;
+  }
+}
+
+.Contact {
+  padding: 0 !important;
+  margin: 0 !important;
+} */
