@@ -44,7 +44,7 @@ export default function Introduction() {
             transition={{ delay: active ? 0.5 : 0.2, duration: 0.5 }}
             className="Introduction-animation"
           >
-            <video muted ref={videoRef} loop className="h-full">
+            <video muted ref={videoRef} loop playsInline className="h-full">
               <source src={videoAnimation} type="video/mp4" />
             </video>
           </motion.div>
