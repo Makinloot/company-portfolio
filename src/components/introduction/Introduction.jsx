@@ -35,7 +35,7 @@ export default function Introduction() {
     };
   }, []);
   return (
-    <div className="Introduction my-20">
+    <div className="Introduction my-20 py-20">
       <div className="container">
         <div className="Introduction-wrapper grid lg:grid-cols-2 sm:grid-rows-[80% 1fr] min-h-screen">
           <motion.div
