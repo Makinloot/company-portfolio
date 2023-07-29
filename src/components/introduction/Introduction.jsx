@@ -37,14 +37,14 @@ export default function Introduction() {
   return (
     <div className="Introduction py-20">
       <div className="container">
-        <div className="Introduction-wrapper grid lg:grid-cols-2 sm:grid-rows-[60% 1fr] min-h-screen">
+        <div className="Introduction-wrapper grid lg:grid-cols-2 sm:grid-rows-[50% 1fr] h-screen">
           <motion.div
             variants={variants}
             animate={active ? "active" : "inactive"}
             transition={{ delay: active ? 0.5 : 0.2, duration: 0.5 }}
             className="Introduction-animation"
           >
-            <video muted ref={videoRef} loop playsInline className="h-full">
+            <video muted ref={videoRef} loop playsInline className="">
               <source src={videoAnimation} type="video/mp4" />
             </video>
           </motion.div>
