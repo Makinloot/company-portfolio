@@ -37,7 +37,7 @@ export default function Introduction() {
   return (
     <div className="Introduction py-20">
       <div className="container">
-        <div className="Introduction-wrapper grid lg:grid-cols-2 sm:grid-rows-[80% 1fr] min-h-screen">
+        <div className="Introduction-wrapper grid lg:grid-cols-2 sm:grid-rows-[60% 1fr] min-h-screen">
           <motion.div
             variants={variants}
             animate={active ? "active" : "inactive"}
