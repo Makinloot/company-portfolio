@@ -29,30 +29,18 @@ export default function Hero() {
     <div className="Hero">
       <div className="container">
         <div className="Hero-wrapper relative min-h-[100vh] flex justify-end items-center">
-          <ul className="flex justify-end absolute z-50 top-[70px] right-20 text-[1.3rem] font-sofiaBlack items-center">
-            <li>
-              <a href="#" className="capitalize hover:text-pinkPrimary">
-                work
-              </a>
-            </li>
-            <li className="mx-[2.6rem]">
-              <a href="#" className="capitalize hover:text-pinkPrimary">
-                contact
-              </a>
-            </li>
-          </ul>
           <div className="Hero-bg absolute -z-10 w-full h-full flex justify-center items-center">
             <img
               src={bg}
               className={
                 width > 1024
                   ? "w-full h-full object-cover"
-                  : "w-1/2 h-1/w-1/2 object-contain pb-80"
+                  : "w-1/2 h-1/w-1/2 object-contain pb-40 md:pb-80"
               }
             />
           </div>
-          <div className="Hero-primary md:translate-y-16 lg:-translate-y-1/2">
-            <h2 className="lg:text-[5rem] mr-[1.45rem] md:text-center lg:text-left md:text-[4rem] md:w-[10ch] mb-[2rem] font-sofiaBlack lg:max-w-[14ch]">
+          <div className="Hero-primary translate-y-16 lg:-translate-y-1/2">
+            <h2 className="lg:text-[5rem] mr-[1.45rem] text-center lg:text-left md:text-[4rem] text-5xl w-[10ch] mb-[2rem] font-sofiaBlack lg:max-w-[14ch]">
               Rebel against boring
             </h2>
             <p className="max-w-[35ch] text-[1.4rem]">
@@ -61,7 +49,7 @@ export default function Hero() {
               <span className="text-pinkPrimary">refuse to blend in.</span>
             </p>
           </div>
-          <div className="Hero-contact flex items-center justify-between absolute pb-7 px-4 bottom-0 z-10 w-full left-0">
+          <div className="Hero-contact flex items-center absolute pb-7 px-4 bottom-0 z-10 w-full left-0">
             <div className="companies flex pl-12 gap-6">
               {companiesData.map((item, i) => (
                 <div key={i} className="max-w-[95px]">
@@ -69,12 +57,6 @@ export default function Hero() {
                 </div>
               ))}
             </div>
-            <button
-              style={{ letterSpacing: "0.1rem" }}
-              className="bg-pinkPrimary uppercase text-xs text-white py-6 px-9 rounded-full"
-            >
-              start yor project
-            </button>
           </div>
         </div>
       </div>

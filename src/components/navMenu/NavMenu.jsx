@@ -19,9 +19,9 @@ export default function NavMenu({ active }) {
         <div
           // testing class when u dont want to open/close everytime
           // className={`Menu-wrapper transition-all duration-1000 p-14 pt-12 fixed w-full top-0 z-[60] h-screen bg-pinkPrimary`}
-          className={`Menu-wrapper left-0 transition-all duration-1000 p-14 pt-12 fixed w-full ${
+          className={`Menu-wrapper left-0 transition-all duration-1000 p-0 md:p-14 pt-12 fixed w-full ${
             active ? "top-0" : "-top-[110%]"
-          } z-[60] h-screen bg-pinkPrimary`}
+          } z-[100] h-screen bg-pinkPrimary`}
         >
           <div className="container">
             {/* logo */}
@@ -46,7 +46,7 @@ export default function NavMenu({ active }) {
             </ul>
 
             {/* socials */}
-            <div className="Menu-socials absolute items-center bottom-16 w-[93.5%] flex justify-between">
+            <div className="Menu-socials absolute items-center bottom-16 w-full left-0 px-4 md:px-16 flex justify-between">
               <div className="flex gap-5">
                 <motion.a
                   href="#"
@@ -87,7 +87,7 @@ export default function NavMenu({ active }) {
               </div>
               {/* btn */}
               <motion.div
-                className="flex gap-12 items-center text-white relative"
+                className="nav-menu-start-project flex gap-12 items-center text-white relative"
                 animate={active ? "active" : "inactive"}
                 variants={variantsButton}
                 transition={{ delay: active ? 1.2 : 0.2 }}

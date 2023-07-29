@@ -12,6 +12,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar {
@@ -33,4 +34,5 @@ html::-webkit-scrollbar-thumb {
   width: 1920px;
   max-width: 100%;
   margin: 0 auto;
+  padding: 0 1rem;
 }

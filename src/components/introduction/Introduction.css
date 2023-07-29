@@ -1,0 +1,8 @@
+.Introduction-primary h2 {
+  line-height: 1;
+  max-width: 14ch;
+}
+.Introduction-primary p {
+  line-height: 1.8;
+  /* max-width: 14ch; */
+}

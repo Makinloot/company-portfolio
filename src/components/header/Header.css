@@ -1,8 +1,9 @@
-/* .burger-menu-li:hover .burger-menu-top {
-  top: -3px;
-  transition: all 0.3s;
+.Header-wrapper ul {
+  display: flex;
 }
-.burger-menu-li:hover .burger-menu-bottom {
-  bottom: -3px;
-  transition: all 0.3s;
-} */
+
+@media (max-width: 1024px) {
+  .Header-wrapper ul {
+    display: none;
+  }
+}
