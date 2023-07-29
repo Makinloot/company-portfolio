@@ -44,7 +44,7 @@ export default function Introduction() {
             transition={{ delay: active ? 0.5 : 0.2, duration: 0.5 }}
             className="Introduction-animation flex justify-center items-center"
           >
-            <video muted ref={videoRef} loop playsInline className="">
+            <video muted ref={videoRef} loop playsInline controls>
               <source src={videoAnimation} type="video/mp4" />
             </video>
           </motion.div>

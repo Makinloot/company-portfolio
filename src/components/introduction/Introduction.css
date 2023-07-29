@@ -6,3 +6,19 @@
   line-height: 1.8;
   /* max-width: 14ch; */
 }
+
+.Introduction-animation video::-webkit-media-controls {
+  display: none !important;
+}
+
+.Introduction-animation video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+.Introduction-animation video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+.Introduction-animation video::-moz-media-controls {
+  display: none !important;
+}
