@@ -15,7 +15,7 @@ export default function AnimatedLink({ active, value, delay }) {
     >
       <a
         href="#"
-        className={`capitalize text-[4.5rem] hover:text-white text-pinkDark`}
+        className={`capitalize text-[2.5rem] md:text-[4.5rem] hover:text-white text-pinkDark`}
       >
         {value}
       </a>

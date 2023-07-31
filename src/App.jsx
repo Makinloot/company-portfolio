@@ -15,12 +15,17 @@ function App() {
     inactive: { opacity: 0, y: "100%" },
   };
   return (
-    <div
-      className={
-        showContact ? "h-screen overflow-y-hidden" : "overflow-visible"
-      }
-    >
-      <div className={`App font-circular overflow-x-hidden text-blackPrimary`}>
+    <div className="h-screen">
+      <motion.div
+        className={`App ${
+          showMenu ? "opacity-0 pointer-events-none" : ""
+        } font-circular overflow-x-hidden text-blackPrimary`}
+        variants={{
+          active: { opacity: 1, display: "block" },
+          inactive: { opacity: 0, display: "none" },
+        }}
+        animate={showMenu || showContact ? "inactive" : "active"}
+      >
         <Header handleMenu={handleMenu} active={showMenu} />
         <motion.button
           style={{ letterSpacing: "0.1rem" }}
@@ -32,15 +37,16 @@ function App() {
           start yor project
         </motion.button>
         <Hero />
-        <div className="container">
-          <Contact active={showContact} setActive={setShowContact} />
-        </div>
         <Introduction />
-      </div>
+      </motion.div>
 
-      <div className="container relative z-[60]">
+      <div className="container">
+        <Contact active={showContact} setActive={setShowContact} />
+      </div>
+      <div className="container !px-0">
         <NavMenu
           active={showMenu}
+          setActive={setShowMenu}
           setContact={setShowContact}
           contact={showContact}
         />

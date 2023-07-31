@@ -47,7 +47,11 @@ export default function Contact({ active, setActive }) {
       className={`Contact z-[100] ${
         active ? "pointer-events-auto" : "pointer-events-none"
       } pt-40 min-h-screen h-screen bg-white grid lg:grid-cols-2 gap-8 grid-rows-[.40fr .20fr .40fr] top-0 items-center absolute left-0 w-full px-4`}
-      animate={active ? { opacity: 1 } : { opacity: 0 }}
+      animate={
+        active
+          ? { opacity: 1, display: "grid" }
+          : { opacity: 0, display: "none" }
+      }
     >
       <button
         onClick={() => setActive(!active)}

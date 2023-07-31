@@ -4,16 +4,16 @@ import "./Introduction.css";
 import { motion } from "framer-motion";
 
 export default function Introduction() {
-  const [active, setActive] = useState(false);
+  // const [active, setActive] = useState(false);
   const videoRef = useRef(null);
-  const variants = {
-    active: { opacity: 1, y: 0 },
-    inactive: { opacity: 0, x: "-100%" },
-  };
-  const variantsText = {
-    active: { opacity: 1, x: 0 },
-    inactive: { opacity: 0, x: "100%" },
-  };
+  // const variants = {
+  //   active: { opacity: 1, y: 0 },
+  //   inactive: { opacity: 0, x: "-100%" },
+  // };
+  // const variantsText = {
+  //   active: { opacity: 1, x: 0 },
+  //   inactive: { opacity: 0, x: "100%" },
+  // };
 
   useEffect(() => {
     // Function to check if the video is at the top of the viewport
@@ -22,7 +22,7 @@ export default function Introduction() {
         const rect = videoRef.current.getBoundingClientRect();
         const isScrolledToTop = rect.top >= 0;
         if (isScrolledToTop && videoRef.current.paused) {
-          setActive(true);
+          // setActive(true);
           videoRef.current.play();
         }
       }

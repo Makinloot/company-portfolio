@@ -29,7 +29,7 @@ export default function Header({ handleMenu, active }) {
           </motion.ul>
           <button
             onClick={handleMenu}
-            className="burger-menu-li fixed z-50 cursor-pointer flex items-center h-[25px]"
+            className="burger-menu-li fixed z-[110] cursor-pointer flex items-center h-[25px]"
           >
             <div
               className={` ${

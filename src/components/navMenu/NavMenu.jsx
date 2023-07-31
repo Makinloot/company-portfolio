@@ -4,27 +4,37 @@ import { motion } from "framer-motion";
 import AnimatedLink from "./AnimatedLink";
 import "./NavMenu.css";
 // eslint-disable-next-line react/prop-types
-export default function NavMenu({ active, setContact, contact }) {
+export default function NavMenu({ active, setContact, contact, setActive }) {
   const variants = {
     active: { opacity: 1, x: 0 },
     inactive: { opacity: 0, x: "-100%" },
+  };
+  const variantsCloseBtn = {
+    active: { opacity: 1, x: 0 },
+    inactive: { opacity: 0, x: "100%" },
   };
   const variantsButton = {
     active: { opacity: 1, x: 0 },
     inactive: { opacity: 0, x: "100%" },
   };
   return (
-    <div className="Menu">
-      <div className="container">
-        <div
-          // testing class when u dont want to open/close everytime
-          // className={`Menu-wrapper transition-all duration-1000 p-14 pt-12 fixed w-full top-0 z-[60] h-screen bg-pinkPrimary`}
-          className={`Menu-wrapper left-0 transition-all duration-1000 p-0 md:p-14 pt-12 fixed w-full ${
-            active && !contact ? "top-0" : "-top-[115%]"
-          } z-[100] h-screen bg-pinkPrimary`}
-        >
-          <div className="container">
-            {/* logo */}
+    <motion.div
+      className={`Menu ${
+        active && !contact ? "opacity-100" : "opacity-0"
+      } block left-0 z-[100] bg-pinkPrimary`}
+      variants={{
+        active: { y: 0, display: "block" },
+        inactive: { y: "100%", display: "none" },
+      }}
+      animate={active && !contact ? "active" : "inactive"}
+      transition={{ duration: active ? 0.4 : 1 }}
+    >
+      <div
+        className={`Menu-wrapper grid p-4 md:p-14 pt-12 min-h-screen bg-pinkPrimary h-screen w-full`}
+      >
+        {/* logo */}
+        <div className="flex justify-between items-center w-full">
+          <div>
             <motion.a
               variants={variants}
               animate={active ? "active" : "inactive"}
@@ -34,80 +44,101 @@ export default function NavMenu({ active, setContact, contact }) {
             >
               <img src={logo} alt="logo" />
             </motion.a>
-
-            {/* list */}
-            <ul className="flex absolute left-[20%] top-[50%] -translate-y-1/2 font-sofiaBlack flex-col">
-              <AnimatedLink active={active} delay=".6" value="work" />
-              <AnimatedLink active={active} delay=".8" value="services" />
-              <AnimatedLink active={active} delay="1" value="agency" />
-              <AnimatedLink active={active} delay="1.2" value="blog" />
-              <AnimatedLink active={active} delay="1.4" value="contact" />
-              <AnimatedLink active={active} delay="1.6" value="careers" />
-            </ul>
-
-            {/* socials */}
-            <div className="Menu-socials absolute items-center bottom-16 w-full left-0 px-4 md:px-16 flex justify-between">
-              <div className="flex gap-5">
-                <motion.a
-                  href="#"
-                  animate={active ? "active" : "inactive"}
-                  variants={variants}
-                  transition={{ delay: active ? 1 : 0.2 }}
-                  className="border border-white rounded-full p-2 text-white block"
-                >
-                  <FaTwitter size={22} />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  animate={active ? "active" : "inactive"}
-                  variants={variants}
-                  transition={{ delay: active ? 1.2 : 0.2 }}
-                  className="border border-white rounded-full p-2 text-white block"
-                >
-                  <FaInstagram size={22} />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  className="border border-white rounded-full p-2 text-white block"
-                  animate={active ? "active" : "inactive"}
-                  variants={variants}
-                  transition={{ delay: active ? 1.4 : 0.2 }}
-                >
-                  <FaLinkedin size={22} />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  className="border border-white rounded-full p-2 text-white block"
-                  animate={active ? "active" : "inactive"}
-                  variants={variants}
-                  transition={{ delay: active ? 1.6 : 0.2 }}
-                >
-                  <FaFacebook size={22} />
-                </motion.a>
-              </div>
-              {/* btn */}
-              <motion.div
-                className="nav-menu-start-project flex gap-12 items-center text-white relative"
-                animate={active ? "active" : "inactive"}
-                variants={variantsButton}
-                transition={{ delay: active ? 1.2 : 0.2 }}
-              >
-                <h3 className="font-sofiaBlack text-[1.6rem]">
-                  Let&apos;s get cracking
-                </h3>
-                <hr className="h-20 w-[1px] bg-red-100 absolute left-1/2" />
-                <button
-                  onClick={() => setContact(!contact)}
-                  style={{ letterSpacing: "0.1rem" }}
-                  className="bg-pinkDark uppercase hover:bg-white hover:text-pinkPrimary transition-all duration-500 text-xs font-sofiaBold text-white py-5 px-9 rounded-full"
-                >
-                  start yor project
-                </button>
-              </motion.div>
-            </div>
+          </div>
+          <div>
+            <motion.button
+              variants={variantsCloseBtn}
+              animate={active ? "active" : "inactive"}
+              transition={{ delay: active ? 1 : 0.2 }}
+              // onClick={handleMenu}
+              onClick={() => setActive(false)}
+              className="z-[110] cursor-pointer h-[25px]"
+            >
+              <div
+                className={` ${
+                  active ? "bg-white -rotate-45" : "top-0"
+                } transition-all duration-500 burger-menu-top absolute burger-bar h-[3px] w-[35px] bg-black`}
+              />
+              <div
+                className={` ${
+                  active ? "bg-white rotate-45" : ""
+                } transition-all duration-500 burger-bar h-[3px] w-[35px] bg-black`}
+              />
+            </motion.button>
           </div>
         </div>
+
+        {/* list */}
+        <ul className="flex font-sofiaBlack my-16 flex-col">
+          <AnimatedLink active={active} delay=".6" value="work" />
+          <AnimatedLink active={active} delay=".8" value="services" />
+          <AnimatedLink active={active} delay="1" value="agency" />
+          <AnimatedLink active={active} delay="1.2" value="blog" />
+          <AnimatedLink active={active} delay="1.4" value="contact" />
+          <AnimatedLink active={active} delay="1.6" value="careers" />
+        </ul>
+
+        {/* socials */}
+        <div className="Menu-socials absolute bottom-0 w-[90%] items-center py-8 flex justify-between">
+          <div className="flex gap-5">
+            <motion.a
+              href="#"
+              animate={active ? "active" : "inactive"}
+              variants={variants}
+              transition={{ delay: active ? 1 : 0.2 }}
+              className="border border-white rounded-full p-2 text-white block"
+            >
+              <FaTwitter size={22} />
+            </motion.a>
+            <motion.a
+              href="#"
+              animate={active ? "active" : "inactive"}
+              variants={variants}
+              transition={{ delay: active ? 1.2 : 0.2 }}
+              className="border border-white rounded-full p-2 text-white block"
+            >
+              <FaInstagram size={22} />
+            </motion.a>
+            <motion.a
+              href="#"
+              className="border border-white rounded-full p-2 text-white block"
+              animate={active ? "active" : "inactive"}
+              variants={variants}
+              transition={{ delay: active ? 1.4 : 0.2 }}
+            >
+              <FaLinkedin size={22} />
+            </motion.a>
+            <motion.a
+              href="#"
+              className="border border-white rounded-full p-2 text-white block"
+              animate={active ? "active" : "inactive"}
+              variants={variants}
+              transition={{ delay: active ? 1.6 : 0.2 }}
+            >
+              <FaFacebook size={22} />
+            </motion.a>
+          </div>
+          {/* btn */}
+          <motion.div
+            className="nav-menu-start-project flex gap-12 items-center text-white relative"
+            animate={active ? "active" : "inactive"}
+            variants={variantsButton}
+            transition={{ delay: active ? 1.2 : 0.2 }}
+          >
+            <h3 className="font-sofiaBlack text-[1.6rem]">
+              Let&apos;s get cracking
+            </h3>
+            <hr className="h-20 w-[1px] bg-red-100 absolute left-1/2" />
+            <button
+              onClick={() => setContact(!contact)}
+              style={{ letterSpacing: "0.1rem" }}
+              className="bg-pinkDark uppercase hover:bg-white hover:text-pinkPrimary transition-all duration-500 text-xs font-sofiaBold text-white py-5 px-9 rounded-full"
+            >
+              start yor project
+            </button>
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
