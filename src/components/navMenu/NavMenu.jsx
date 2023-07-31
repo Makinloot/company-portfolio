@@ -20,7 +20,7 @@ export default function NavMenu({ active, setContact, contact }) {
           // testing class when u dont want to open/close everytime
           // className={`Menu-wrapper transition-all duration-1000 p-14 pt-12 fixed w-full top-0 z-[60] h-screen bg-pinkPrimary`}
           className={`Menu-wrapper left-0 transition-all duration-1000 p-0 md:p-14 pt-12 fixed w-full ${
-            active ? "top-0" : "-top-[115%]"
+            active && !contact ? "top-0" : "-top-[115%]"
           } z-[100] h-screen bg-pinkPrimary`}
         >
           <div className="container">

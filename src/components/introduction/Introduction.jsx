@@ -39,26 +39,19 @@ export default function Introduction() {
       <div className="container">
         <div className="Introduction-wrapper grid lg:grid-cols-2 sm:grid-rows-[50% 1fr] min-h-screen">
           <motion.div
-            variants={variants}
-            animate={active ? "active" : "inactive"}
-            transition={{ delay: active ? 0.5 : 0.2, duration: 0.5 }}
+            // variants={variants}
+            // animate={active ? "active" : "inactive"}
+            // transition={{ delay: active ? 0.5 : 0.2, duration: 0.5 }}
             className="Introduction-animation flex justify-center items-center"
           >
-            <video
-              muted
-              ref={videoRef}
-              loop
-              playsInline
-              controls
-              autoPlay="autoplay"
-            >
+            <video muted ref={videoRef} loop playsInline controls autoPlay>
               <source src={videoAnimation} type="video/mp4" />
             </video>
           </motion.div>
           <motion.div
-            variants={variantsText}
-            animate={active ? "active" : "inactive"}
-            transition={{ delay: active ? 0.5 : 0.2, duration: 0.5 }}
+            // variants={variantsText}
+            // animate={active ? "active" : "inactive"}
+            // transition={{ delay: active ? 0.5 : 0.2, duration: 0.5 }}
             className="Introduction-primary mt-8 flex sm:justify-start lg:ml-[10%] md:justify-center flex-col"
           >
             <h2 className="lg:text-[4rem] text-[3rem] font-sofiaBlack">

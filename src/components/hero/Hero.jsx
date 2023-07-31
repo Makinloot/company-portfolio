@@ -20,7 +20,6 @@ const companiesData = [
 export default function Hero() {
   const { width } = useWindowSize();
   const [bg, setBg] = useState(heroBg);
-  console.log(width);
   useEffect(() => {
     if (width > 1024) setBg(heroBg);
     else if (width <= 1024) setBg(heroBgSmall);
