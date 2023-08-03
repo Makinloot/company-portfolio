@@ -36,3 +36,9 @@
   .Hero-contact button {
   }
 }
+
+@media (max-height: 500px) {
+  .Hero {
+    padding: 4rem 0;
+  }
+}
