@@ -11,7 +11,7 @@ export default {
         circular: ["circular", "sans-serif"],
       },
       colors: {
-        pinkPrimary: "#F74EA1",
+        pinkPrimary: "#A08CE8",
         blackPrimary: "#373737",
         pinkDark: "#b50d86",
       },

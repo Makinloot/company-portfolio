@@ -1,7 +1,8 @@
-import logo from "/logo.svg";
+// import logo from "/logo.svg";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
 import AnimatedLink from "./AnimatedLink";
+import logo from "/logo.png";
 import "./NavMenu.css";
 // eslint-disable-next-line react/prop-types
 export default function NavMenu({ active, setContact, contact, setActive }) {
@@ -34,17 +35,20 @@ export default function NavMenu({ active, setContact, contact, setActive }) {
       >
         {/* logo */}
         <div className="flex justify-between items-center w-full">
-          <div>
-            <motion.a
-              variants={variants}
-              animate={active ? "active" : "inactive"}
-              transition={{ delay: active ? 1 : 0.2 }}
-              href="/"
-              className={`logo`}
-            >
-              <img src={logo} alt="logo" />
-            </motion.a>
-          </div>
+          <motion.div
+            variants={variants}
+            animate={active ? "active" : "inactive"}
+            transition={{ delay: active ? 1 : 0.2 }}
+            className="w-40 bg-white rounded-md"
+          >
+            <a href="/" className={`logo block w-full p-4 h-full`}>
+              <img
+                src={logo}
+                alt="logo"
+                className="w-full h-full object-contain"
+              />
+            </a>
+          </motion.div>
           <div>
             <motion.button
               variants={variantsCloseBtn}

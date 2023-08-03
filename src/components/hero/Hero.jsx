@@ -22,24 +22,28 @@ export default function Hero() {
   const [bg, setBg] = useState(heroBg);
   useEffect(() => {
     if (width > 1024) setBg(heroBg);
-    else if (width <= 1024) setBg(heroBgSmall);
+    else if (width <= 1024) setBg(heroBg);
   }, [width]);
   return (
     <div className="Hero">
       <div className="container">
-        <div className="Hero-wrapper relative min-h-[100vh] flex flex-col justify-center items-center">
-          <div className="Hero-bg lg:absolute lg:h-full -z-10 w-full flex justify-center items-center">
+        <div className="Hero-wrapper relative min-h-[100vh] flex flex-col lg:flex-row justify-center items-center">
+          {/* <div className="Hero-wrapper relative min-h-[100vh] flex flex-col justify-center items-center"> */}
+          <div className="Hero-bg w-full max-w-[500px] flex justify-center items-center">
+            {/* <div className="Hero-bg lg:absolute lg:h-full -z-10 w-full flex justify-center items-center"> */}
             <img
               src={bg}
               className={
                 width > 1024
-                  ? "w-full h-full object-cover"
-                  : "w-1/2 h-1/w-1/2 object-contain"
+                  ? "w-full h-full object-contain"
+                  : "w-1/2 h-1/2 object-contain"
               }
             />
           </div>
-          <div className="Hero-primary lg:absolute translate-y-16 lg:-translate-y-1/2">
-            <h2 className="lg:text-[5rem] mr-[1.45rem] text-center lg:text-left md:text-[4rem] text-5xl max-w-[10ch] mb-[2rem] font-sofiaBlack lg:w-[14ch]">
+          <div className="Hero-primary lg:ml-16 translate-y-16 lg:transform-none">
+            {/* <div className="Hero-primary lg:absolute translate-y-16 lg:-translate-y-1/2"> */}
+            <h2 className="lg:text-[4rem] lg:self-start mr-[1.45rem] text-center lg:text-left md:text-[4rem] text-5xl max-w-[10ch] mb-[2rem] font-sofiaBlack">
+              {/* <h2 className="lg:text-[5rem] mr-[1.45rem] text-center lg:text-left md:text-[4rem] text-5xl max-w-[10ch] mb-[2rem] font-sofiaBlack lg:w-[14ch]"> */}
               Rebel against boring
             </h2>
             <p className="max-w-[35ch] text-lg md:text-2xl">

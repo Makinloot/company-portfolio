@@ -5,7 +5,6 @@ import NavMenu from "./components/navMenu/NavMenu";
 import Introduction from "./components/introduction/Introduction";
 import { motion } from "framer-motion";
 import Contact from "./components/contact/Contact";
-
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [showContact, setShowContact] = useState(false);
