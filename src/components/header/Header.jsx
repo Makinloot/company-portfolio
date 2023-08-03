@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import "./Header.css";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 // eslint-disable-next-line react/prop-types
 export default function Header({ handleMenu, active }) {
   const variants = {
@@ -7,16 +8,29 @@ export default function Header({ handleMenu, active }) {
     inactive: { opacity: 0 },
   };
   return (
-    <div className="Header fixed py-[4.5rem] z-[70] px-[3rem] h-auto w-20 right-0">
+    <div className="Header absolute py-[4.5rem] z-[70] px-[3rem] h-auto w-20 right-0">
       <div className="container">
         <div className="Header-wrapper flex justify-end">
           <motion.ul
             variants={variants}
             animate={active ? "inactive" : "active"}
             transition={{ delay: active ? 0.2 : 0.6 }}
-            className="flex justify-end absolute -z-30 top-[70px] text-[1.3rem] font-sofiaBlack items-center"
+            className="flex justify-end gap-5 absolute -z-30 top-[70px] text-[1.3rem] font-sofiaBlack items-center"
           >
-            <li>
+            <motion.a
+              href="#"
+              className="capitalize hover:text-pinkPrimary block"
+            >
+              <FaInstagram size={24} color="#A08CE8" />
+            </motion.a>
+            <motion.a
+              href="#"
+              className="capitalize hover:text-pinkPrimary block"
+              transition={{ delay: active ? 1.6 : 0.2 }}
+            >
+              <FaFacebook size={24} color="#A08CE8" />
+            </motion.a>
+            {/* <li>
               <a href="#" className="capitalize hover:text-pinkPrimary">
                 insta
               </a>
@@ -25,7 +39,7 @@ export default function Header({ handleMenu, active }) {
               <a href="#" className="capitalize hover:text-pinkPrimary">
                 FB
               </a>
-            </li>
+            </li> */}
           </motion.ul>
           {/* <button
             onClick={handleMenu}

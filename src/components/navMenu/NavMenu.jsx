@@ -40,8 +40,9 @@ export default function NavMenu({ active, setContact, contact, setActive }) {
             animate={active ? "active" : "inactive"}
             transition={{ delay: active ? 1 : 0.2 }}
             className="w-40 bg-white rounded-md"
+            onClick={() => setActive(false)}
           >
-            <a href="/" className={`logo block w-full p-4 h-full`}>
+            <a href="#" className={`logo block w-full p-4 h-full`}>
               <img
                 src={logo}
                 alt="logo"

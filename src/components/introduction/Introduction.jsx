@@ -55,13 +55,15 @@ export default function Introduction() {
             className="Introduction-primary mt-8 flex sm:justify-start lg:ml-[10%] md:justify-center flex-col"
           >
             <h2 className="lg:text-[4rem] text-[3rem] font-sofiaBlack">
-              Making brands a damn site better
+              Brands are not just numbers anymore
             </h2>
-            <p className="max-w-[70ch] mt-7 text-[1rem]">
-              Let’s face it, first impressions matter. Your website’s an
-              opportunity to wow your audience, so why waste it with bad design?
-              Because brands win new fans when they’re brave enough to go beyond
-              their creative comfort zone.
+            <p className="max-w-[60ch] mt-7 text-[1rem]">
+              We provide online and offline marketing services for businesses
+              that seek reaching new milestones.{" "}
+              <span className="text-pinkPrimary">
+                We provide online and offline marketing services for businesses
+                that seek reaching new milestones.
+              </span>
             </p>
           </motion.div>
         </div>
