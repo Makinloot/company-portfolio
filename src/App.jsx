@@ -31,7 +31,8 @@ function App() {
           variants={btnVariants}
           animate={showMenu || showContact ? "inactive" : "active"}
           className="bg-pinkPrimary fixed right-6 z-50 bottom-6 uppercase text-xs text-white py-6 px-9 rounded-full"
-          onClick={() => setShowContact(!showContact)}
+          // onClick={() => setShowContact(!showContact)}
+          onClick={handleMenu}
         >
           start yor project
         </motion.button>

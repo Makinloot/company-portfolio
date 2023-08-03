@@ -14,20 +14,20 @@ export default function Header({ handleMenu, active }) {
             variants={variants}
             animate={active ? "inactive" : "active"}
             transition={{ delay: active ? 0.2 : 0.6 }}
-            className="flex justify-end absolute -z-30 top-[70px] right-20 text-[1.3rem] font-sofiaBlack items-center"
+            className="flex justify-end absolute -z-30 top-[70px] text-[1.3rem] font-sofiaBlack items-center"
           >
             <li>
               <a href="#" className="capitalize hover:text-pinkPrimary">
-                work
+                insta
               </a>
             </li>
             <li className="mx-[2.6rem]">
               <a href="#" className="capitalize hover:text-pinkPrimary">
-                contact
+                FB
               </a>
             </li>
           </motion.ul>
-          <button
+          {/* <button
             onClick={handleMenu}
             className="burger-menu-li fixed z-[110] cursor-pointer flex items-center h-[25px]"
           >
@@ -46,7 +46,7 @@ export default function Header({ handleMenu, active }) {
                 active ? "opacity-0" : ""
               } transition-all duration-300 burger-menu-bottom absolute bottom-0 burger-bar h-[3px] w-[50%] right-0 bg-black`}
             />
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
