@@ -22,27 +22,51 @@ export default function Header({ handleMenu, active }) {
               {/* <a href="/" className="logo">
                 <img src={logo} alt="purple logo" className="w-40" />
               </a> */}
-              <a href="#" className="hover:text-pinkPrimary">
+              <motion.a
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2 }}
+                href="#"
+                className="hover:text-pinkPrimary"
+              >
                 About us
-              </a>
-              <a href="#" className="hover:text-pinkPrimary ">
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                href="#"
+                className="hover:text-pinkPrimary "
+              >
                 Services
-              </a>
-              <a href="#" className="hover:text-pinkPrimary ">
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                href="#"
+                className="hover:text-pinkPrimary "
+              >
                 Contact
-              </a>
+              </motion.a>
             </div>
             <div className="flex gap-5 socials-menu">
               <motion.a
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
                 href="#"
                 className="capitalize hover:text-pinkPrimary block"
               >
                 <FaInstagram size={24} color="#A08CE8" />
               </motion.a>
               <motion.a
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 href="#"
                 className="capitalize hover:text-pinkPrimary block"
-                transition={{ delay: active ? 1.6 : 0.2 }}
+                // transition={{ delay: active ? 1.6 : 0.2 }}
               >
                 <FaFacebook size={24} color="#A08CE8" />
               </motion.a>
