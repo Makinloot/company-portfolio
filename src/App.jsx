@@ -31,8 +31,9 @@ function App() {
           variants={btnVariants}
           animate={showMenu || showContact ? "inactive" : "active"}
           className="bg-pinkPrimary fixed right-6 z-50 bottom-6 uppercase text-xs text-white py-6 px-9 rounded-full"
-          // onClick={() => setShowContact(!showContact)}
-          onClick={handleMenu}
+          onClick={() => setShowContact(!showContact)}
+          // for nav menu
+          // onClick={handleMenu}
         >
           start yor project
         </motion.button>
@@ -43,14 +44,15 @@ function App() {
       <div className="container">
         <Contact active={showContact} setActive={setShowContact} />
       </div>
-      <div className="container !px-0">
+      {/* if we want to have beautiful nav menu */}
+      {/* <div className="container !px-0">
         <NavMenu
           active={showMenu}
           setActive={setShowMenu}
           setContact={setShowContact}
           contact={showContact}
         />
-      </div>
+      </div> */}
     </div>
   );
 }

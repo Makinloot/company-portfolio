@@ -7,3 +7,25 @@
     display: none;
   }
 } */
+
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .Header-menu {
+    justify-content: center !important;
+  }
+  .Header-menu-links {
+    margin-left: 0 !important;
+  }
+  .Header-menu-links a {
+    margin-left: 0 !important;
+    font-size: 1rem;
+  }
+  .socials-menu {
+    display: none !important;
+  }
+}
