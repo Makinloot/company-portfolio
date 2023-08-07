@@ -54,18 +54,20 @@ export default function Header({ handleMenu, active }) {
               <motion.a
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4 }}
-                href="#"
-                className="capitalize hover:text-pinkPrimary flex justify-center items-center w-8 transition-all h-8 text-3xl hover:text-2xl"
+                transition={{ delay: 0.2 }}
+                href="https://www.instagram.com/purplemindss/?fbclid=IwAR3EWtQc33lM8m80_LrXOqmGruThe-vcka7DaPgVduwgt9dCBJXRd_nD8-Y"
+                target="_blank"
+                className="capitalize hover:text-pinkPrimary flex justify-center items-center w-8 transition-[font-size] h-8 text-3xl hover:text-2xl"
               >
                 <FaInstagram color="#A08CE8" />
               </motion.a>
               <motion.a
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                href="#"
-                className="capitalize hover:text-pinkPrimary flex justify-center items-center w-8 transition-all h-8 text-3xl hover:text-2xl"
+                transition={{ delay: 0.4 }}
+                href="https://www.facebook.com/profile.php?id=100095567229744"
+                target="_blank"
+                className="capitalize hover:text-pinkPrimary flex justify-center items-center w-8 transition-[font-size] h-8 text-3xl hover:text-2xl"
               >
                 <FaFacebook color="#A08CE8" />
               </motion.a>
