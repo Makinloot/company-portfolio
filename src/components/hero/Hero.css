@@ -37,8 +37,24 @@
   }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 825px) {
+  .Hero {
+    padding-top: 40px;
+  }
+}
+@media (max-height: 755px) {
+  .Hero {
+    padding-top: 80px;
+  }
+}
+@media (max-height: 660px) {
+  .Hero {
+    padding-top: 160px;
+  }
+}
+
+/* @media (max-height: 500px) {
   .Hero {
     padding: 4rem 0;
   }
-}
+} */
