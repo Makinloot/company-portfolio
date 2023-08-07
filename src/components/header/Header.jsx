@@ -56,31 +56,20 @@ export default function Header({ handleMenu, active }) {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4 }}
                 href="#"
-                className="capitalize hover:text-pinkPrimary block"
+                className="capitalize hover:text-pinkPrimary flex justify-center items-center w-8 transition-all h-8 text-3xl hover:text-2xl"
               >
-                <FaInstagram size={24} color="#A08CE8" />
+                <FaInstagram color="#A08CE8" />
               </motion.a>
               <motion.a
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 href="#"
-                className="capitalize hover:text-pinkPrimary block"
-                // transition={{ delay: active ? 1.6 : 0.2 }}
+                className="capitalize hover:text-pinkPrimary flex justify-center items-center w-8 transition-all h-8 text-3xl hover:text-2xl"
               >
-                <FaFacebook size={24} color="#A08CE8" />
+                <FaFacebook color="#A08CE8" />
               </motion.a>
             </div>
-            {/* <li>
-              <a href="#" className="capitalize hover:text-pinkPrimary">
-                insta
-              </a>
-            </li>
-            <li className="mx-[2.6rem]">
-              <a href="#" className="capitalize hover:text-pinkPrimary">
-                FB
-              </a>
-            </li> */}
           </motion.ul>
         </div>
       </div>
