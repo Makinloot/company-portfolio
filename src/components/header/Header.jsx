@@ -18,6 +18,20 @@ export default function Header({ handleMenu, active }) {
             transition={{ delay: active ? 0.2 : 0.6 }}
             className="Header-menu flex justify-between absolute w-full -z-30 text-[1.3rem] font-sofiaBlack items-center"
           >
+            <div className="Header-menu-links flex gap-5 ml-4 font-circular">
+              {/* <a href="/" className="logo">
+                <img src={logo} alt="purple logo" className="w-40" />
+              </a> */}
+              <a href="#" className="hover:text-pinkPrimary">
+                About us
+              </a>
+              <a href="#" className="hover:text-pinkPrimary ">
+                Services
+              </a>
+              <a href="#" className="hover:text-pinkPrimary ">
+                Contact
+              </a>
+            </div>
             <div className="flex gap-5 socials-menu">
               <motion.a
                 href="#"
@@ -32,20 +46,6 @@ export default function Header({ handleMenu, active }) {
               >
                 <FaFacebook size={24} color="#A08CE8" />
               </motion.a>
-            </div>
-            <div className="Header-menu-links flex gap-5 font-circular">
-              <a href="#" className="hover:text-pinkPrimary">
-                About us
-              </a>
-              <a href="#" className="hover:text-pinkPrimary">
-                Services
-              </a>
-              <a href="#" className="hover:text-pinkPrimary mr-8">
-                Contact
-              </a>
-              <a href="/" className="logo">
-                <img src={logo} alt="purple logo" className="w-32 mt-1" />
-              </a>
             </div>
             {/* <li>
               <a href="#" className="capitalize hover:text-pinkPrimary">

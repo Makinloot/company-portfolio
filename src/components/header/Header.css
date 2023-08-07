@@ -19,10 +19,10 @@
     justify-content: center !important;
   }
   .Header-menu-links {
-    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
   .Header-menu-links a {
-    margin-right: 0 !important;
+    margin-left: 0 !important;
     font-size: 1rem;
   }
   .socials-menu {
