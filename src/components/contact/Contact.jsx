@@ -87,9 +87,9 @@ export default function Contact({ active, setActive }) {
           acceptPolicy: false,
         }}
         validationSchema={contactSchema}
-        onSubmit={(values, { setSubmitting }) => {
-          console.log("submitted values", values);
-          submitForm(setSubmitting);
+        onSubmit={async (values, { setSubmitting, resetForm }) => {
+          await submitForm(setSubmitting);
+          resetForm();
         }}
       >
         {({

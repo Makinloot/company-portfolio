@@ -1,10 +1,11 @@
 import { useState } from "react";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
-import NavMenu from "./components/navMenu/NavMenu";
+// import NavMenu from "./components/navMenu/NavMenu";
 import Introduction from "./components/introduction/Introduction";
 import { motion } from "framer-motion";
 import Contact from "./components/contact/Contact";
+import Services from "./components/services/Services";
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [showContact, setShowContact] = useState(false);
@@ -39,6 +40,7 @@ function App() {
         </motion.button>
         <Hero />
         <Introduction />
+        <Services />
       </motion.div>
 
       <div className="container">

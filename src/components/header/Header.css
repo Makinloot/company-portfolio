@@ -1,16 +1,24 @@
+.Header-wrapper {
+}
+.Header-menu-links {
+  pointer-events: all !important;
+}
+
 .Header-wrapper ul {
   display: flex;
 }
 
-/* @media (max-width: 1024px) {
-  .Header-wrapper ul {
-    display: none;
+@media (max-width: 600px) {
+  .Header-wrapper {
+    margin: 0 !important;
   }
-} */
 
-@media (max-width: 768px) {
-  .logo {
-    display: none;
+  .socials-wrapper {
+    justify-content: flex-end !important;
+  }
+
+  .socials-logo {
+    display: none !important;
   }
 }
 
