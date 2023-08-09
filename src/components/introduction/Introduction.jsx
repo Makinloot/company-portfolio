@@ -39,7 +39,7 @@ export default function Introduction() {
     };
   }, []);
   return (
-    <section className="Introduction py-20">
+    <section id="about-us" className="Introduction py-20">
       <div className="container !px-0">
         <div className="Introduction-wrapper grid gap-4 lg:grid-cols-2 sm:grid-rows-[50% 1fr] min-h-screen">
           <motion.div className="Introduction-primary px-4 mt-8 flex sm:justify-start lg:ml-[10%] md:justify-center flex-col">
