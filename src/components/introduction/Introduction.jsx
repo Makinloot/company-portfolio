@@ -62,9 +62,7 @@ export default function Introduction() {
               variants={imageVariants}
               transition={{ duration: 1 }}
               src={images[currentImageIndex]}
-              className={`${
-                currentImageIndex === 1 ? "object-right" : ""
-              } h-full object-cover object-left`}
+              className={` h-full object-cover object-left`}
             />
             {/* <video muted ref={videoRef} loop playsInline controls autoPlay>
               <source src={videoAnimation} type="video/mp4" />
