@@ -30,40 +30,40 @@ export default function ServicesPage({ showContact, setShowContact }) {
             transition={{ duration: 0.6 }}
             className="services-grid max-w-[1000px] mx-auto grid grid-cols-2 md:grid-cols-3 my-16 md:grid-rows-4"
           >
-            <li className="services-li relative px-8 py-4 list border capitalize font-circular border-black p-2">
+            <li className="services-li flex items-center justify-left relative px-8 py-4 list border capitalize font-circular border-black p-2">
               Web Development and Design
             </li>
-            <li className="services-li relative px-8 py-4 list border capitalize font-circular border-black p-2">
+            <li className="services-li flex items-center justify-left relative px-8 py-4 list border capitalize font-circular border-black p-2">
               Social Media Marketing
             </li>
-            <li className="services-li relative px-8 py-4 list border capitalize font-circular border-black p-2">
+            <li className="services-li flex items-center justify-left relative px-8 py-4 list border capitalize font-circular border-black p-2">
               Branding and Positioning
             </li>
-            <li className="services-li relative px-8 py-4 list border capitalize font-circular border-black p-2">
+            <li className="services-li flex items-center justify-left relative px-8 py-4 list border capitalize font-circular border-black p-2">
               Digital and Inbound Marketing
             </li>
-            <li className="services-li relative px-8 py-4 list border capitalize font-circular border-black p-2">
+            <li className="services-li flex items-center justify-left relative px-8 py-4 list border capitalize font-circular border-black p-2">
               Search Engine Optimization
             </li>
-            <li className="services-li relative px-8 py-4 list border capitalize font-circular border-black p-2">
+            <li className="services-li flex items-center justify-left relative px-8 py-4 list border capitalize font-circular border-black p-2">
               Marketing Automation
             </li>
-            <li className="services-li relative px-8 py-4 list border capitalize font-circular border-black p-2">
+            <li className="services-li flex items-center justify-left relative px-8 py-4 list border capitalize font-circular border-black p-2">
               Email Marketing
             </li>
-            <li className="services-li relative px-8 py-4 list border capitalize font-circular border-black p-2">
+            <li className="services-li flex items-center justify-left relative px-8 py-4 list border capitalize font-circular border-black p-2">
               Business analyzes
             </li>
-            <li className="services-li relative px-8 py-4 list border capitalize font-circular border-black p-2">
+            <li className="services-li flex items-center justify-left relative px-8 py-4 list border capitalize font-circular border-black p-2">
               Branding
             </li>
-            <li className="services-li relative px-8 py-4 list border capitalize font-circular border-black p-2">
+            <li className="services-li flex items-center justify-left relative px-8 py-4 list border capitalize font-circular border-black p-2">
               Marketing strategy
             </li>
-            <li className="services-li relative px-8 py-4 list border capitalize font-circular border-black p-2">
+            <li className="services-li flex items-center justify-left relative px-8 py-4 list border capitalize font-circular border-black p-2">
               Marketing research
             </li>
-            <li className="services-li relative px-8 py-4 list border capitalize font-circular border-black p-2">
+            <li className="services-li flex items-center justify-left relative px-8 py-4 list border capitalize font-circular border-black p-2">
               Marketing Campaign
             </li>
           </motion.ul>
