@@ -18,7 +18,11 @@
   }
 
   .socials-wrapper .socials {
-    display: none !important;
+    /* display: none !important; */
+    position: absolute !important;
+    top: 110px !important;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .socials-logo {

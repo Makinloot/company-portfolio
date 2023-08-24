@@ -24,4 +24,9 @@
   .Services-buttons {
     margin-top: 100px !important;
   }
+
+  .service-logo-bottom {
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
 }

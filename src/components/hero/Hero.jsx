@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section className="Hero">
       <div className="container">
-        <div className="Hero-wrapper relative min-h-[100vh] flex flex-col lg:flex-row justify-center items-center">
+        <div className="Hero-wrapper relative mt-5 min-h-[100vh] flex flex-col lg:flex-row justify-center items-center">
           <div className="Hero-bg w-full max-w-[500px] flex justify-center items-center">
             <img
               src={heroBg}

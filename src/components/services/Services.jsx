@@ -5,8 +5,11 @@ export default function Services({ contact, setContact }) {
   return (
     <section className="Services" id="services">
       <div className="container">
-        <div className="Services-wrapper relative px-4 flex min-h-[100vh] flex-col items-center justify-center">
-          <a href="/" className="absolute w-44 p-5 top-2 left-2">
+        <div className="Services-wrapper relative px-4 pt-16 pb-24 flex min-h-[100vh] flex-col items-center justify-center">
+          <a
+            href="/"
+            className="service-logo-bottom absolute w-44 p-5 top-2 left-2"
+          >
             <img
               src={logo}
               alt="purple logo"
