@@ -74,7 +74,7 @@ export default function Header({ active, contact, setContact }) {
                 />
               </motion.span>
             </Link>
-            <div className="flex bg-white p-1 rounded-sm">
+            <div className="flex socials bg-white p-1 rounded-sm">
               <motion.a
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
