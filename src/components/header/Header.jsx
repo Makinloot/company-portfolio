@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import "./Header.css";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import logo from "/logo.png";
+import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
-export default function Header({ handleMenu, active }) {
+export default function Header({ active, contact, setContact }) {
   const variants = {
     active: { opacity: 1 },
     inactive: { opacity: 0 },
@@ -20,54 +21,59 @@ export default function Header({ handleMenu, active }) {
               className="Header-menu flex justify-start absolute w-full -z-30 text-[1.3rem] font-sofiaBlack items-center"
             >
               <div className="Header-menu-links relative flex gap-5 ml-4 font-circular">
-                <motion.a
-                  initial={{ opacity: 0, y: -50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.2 }}
-                  href="#about-us"
-                  className="hover:text-pinkPrimary uppercase"
-                >
-                  About us
-                </motion.a>
-                <motion.a
-                  initial={{ opacity: 0, y: -50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4 }}
-                  href="#services"
-                  className="hover:text-pinkPrimary uppercase"
-                >
-                  Services
-                </motion.a>
-                <motion.a
-                  initial={{ opacity: 0, y: -50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  href="#"
-                  className="hover:text-pinkPrimary uppercase"
-                >
-                  Contact
-                </motion.a>
+                <Link to={"/about-us"}>
+                  <motion.span
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="hover:text-pinkPrimary uppercase"
+                  >
+                    About us
+                  </motion.span>
+                </Link>
+                <Link to={"/services"}>
+                  <motion.span
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="hover:text-pinkPrimary uppercase"
+                  >
+                    Services
+                  </motion.span>
+                </Link>
+                <Link>
+                  <motion.button
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    onClick={() => setContact(!contact)}
+                    className="hover:text-pinkPrimary uppercase"
+                  >
+                    Contact
+                  </motion.button>
+                </Link>
               </div>
             </motion.ul>
           </div>
         </div>
       </div>
-      <div className="flex gap-5 socials-menu w-full py-[4.5rem] z-[1000] fixed">
+      <div className="flex gap-5 socials-menu w-full py-[4.5rem] z-[1000] absolute">
         <div className="container">
           <div className="socials-wrapper flex w-full justify-between">
-            <motion.a
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-              href="/"
-              className="w-[100px] socials-logo bg-white p-1 rounded-sm"
-            >
-              <img
-                src={logo}
-                alt="logo"
-                className="w-full object-contain h-full"
-              />
-            </motion.a>
+            <Link to={"/"} className="w-[100px] p-1">
+              <motion.span
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                className="socials-logo bg-white rounded-sm"
+              >
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="w-full object-contain h-full"
+                />
+              </motion.span>
+            </Link>
             <div className="flex bg-white p-1 rounded-sm">
               <motion.a
                 initial={{ opacity: 0, x: 50 }}

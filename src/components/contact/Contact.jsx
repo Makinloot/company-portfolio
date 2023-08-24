@@ -66,13 +66,13 @@ export default function Contact({ active, setActive }) {
             Let us help you get your project started.
           </h2>
           <span className="text-xl my-8 block font-circular">Contact us</span>
-          <p className="text-pinkPrimary my-4">hello@kota.co.uk</p>
+          <p className="text-pinkPrimary my-4">hello@purpledminds.com</p>
           <div className="flex flex-wrap my-4">
-            London:{" "}
-            <span className="ml-2 text-pinkPrimary">+44(0)20 3951 0562</span>
+            Tbilisi:{" "}
+            <span className="ml-2 text-pinkPrimary">+955 571 191 909</span>
           </div>
           <div className="flex flex-wrap my-4">
-            New York:{" "}
+            Brooklyn, NY:{" "}
             <span className="ml-2 text-pinkPrimary">+1 833 502 0267</span>
           </div>
         </div>

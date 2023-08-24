@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 // import videoAnimation from "/animation.mp4";
-import introImage from "/introduction-image.png";
-import introImage2 from "/introduction-image-2.png";
+import introImage from "/introduction-image.svg";
+import introImage2 from "/introduction-image-2.svg";
 import "./Introduction.css";
 import { motion } from "framer-motion";
 
@@ -62,11 +62,15 @@ export default function Introduction() {
               variants={imageVariants}
               transition={{ duration: 1 }}
               src={images[currentImageIndex]}
-              className={` h-full object-cover object-left`}
+              // src={introImage}
+              // className={` h-full object-contain`}
+              // style={{
+              //   aspectRatio: 1.77778,
+              //   maxWidth: "100%",
+              //   maxHeight: "100%",
+              // }}
+              className={`h-full object-cover`}
             />
-            {/* <video muted ref={videoRef} loop playsInline controls autoPlay>
-              <source src={videoAnimation} type="video/mp4" />
-            </video> */}
           </div>
         </div>
       </div>
