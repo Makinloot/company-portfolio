@@ -55,7 +55,7 @@ export default function Contact({ active, setActive }) {
     >
       <button
         onClick={() => setActive(!active)}
-        className="Contact-close fixed top-12 p-8 flex justify-center items-center w-[50px] right-6 text-pinkPrimary"
+        className="Contact-close fixed top-12 bg-red-500 z-[1000] flex justify-center items-center w-[50px] right-6 text-pinkPrimary"
       >
         <span className="h-2 w-full rotate-45 bg-pinkPrimary block absolute left-0"></span>
         <span className="h-2 w-full -rotate-45 bg-pinkPrimary block absolute left-0"></span>

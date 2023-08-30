@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import "./Services.css";
-import logo from "/logo.png";
+import logo from "/logo-black.svg";
 export default function Services({ contact, setContact }) {
   return (
     <section className="Services" id="services">
