@@ -73,7 +73,7 @@ export default function Contact({ active, setActive }) {
           </div>
           <div className="flex flex-wrap my-4">
             Brooklyn, NY:{" "}
-            <span className="ml-2 text-pinkPrimary">+1 833 502 0267</span>
+            <span className="ml-2 text-pinkPrimary">+1 862 2287899</span>
           </div>
         </div>
       </div>
