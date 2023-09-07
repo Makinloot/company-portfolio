@@ -26,8 +26,8 @@ export default function Contact({ active, setActive }) {
       lastName: lastName,
     };
     try {
-      const response = await axios.post("http://localhost:3000/email", options); // testing only
-      // const response = await axios.post("/email", options);
+      // const response = await axios.post("http://localhost:3000/email", options); // testing only
+      const response = await axios.post("/email", options);
       setSubmitting(false);
       setShowPopup(true);
       console.log("POST request response:", response.data);
