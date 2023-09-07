@@ -14,7 +14,10 @@ export default function Contact({ active, setActive }) {
 
   const submitForm = async (
     setSubmitting,
-    { firstName, lastName, email, message }
+    firstName,
+    lastName,
+    email,
+    message
   ) => {
     const options = {
       text: message,
@@ -23,15 +26,15 @@ export default function Contact({ active, setActive }) {
       lastName: lastName,
     };
     try {
-      // const response = await axios.post("http://localhost:3000/email", options); // testing only
-      const response = await axios.post("/email", options);
+      const response = await axios.post("http://localhost:3000/email", options); // testing only
+      // const response = await axios.post("/email", options);
       setSubmitting(false);
       setShowPopup(true);
       console.log("POST request response:", response.data);
     } catch (error) {
       setSubmitting(false);
       setShowPopup(true);
-      setPopupText(error);
+      setPopupText("error");
       console.log(error);
     }
   };
@@ -95,7 +98,13 @@ export default function Contact({ active, setActive }) {
         }}
         validationSchema={contactSchema}
         onSubmit={async (values, { setSubmitting, resetForm }) => {
-          await submitForm(setSubmitting, values);
+          await submitForm(
+            setSubmitting,
+            values.firstName,
+            values.lastName,
+            values.email,
+            values.message
+          );
           resetForm();
         }}
       >
