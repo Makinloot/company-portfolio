@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 import "dotenv/config";
 import cors from "cors";
 import { emailRouter } from "./routes/email.router.js";
+import { testRouter } from "./routes/test.router.js";
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -15,5 +16,6 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, "..", "dist")));
 
 app.use("/email", emailRouter);
+app.use("/test", testRouter);
 
 export { app };
