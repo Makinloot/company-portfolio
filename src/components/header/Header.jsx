@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import "./Header.css";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTiktok,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import logo from "/logo.png";
 import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
@@ -91,9 +96,29 @@ export default function Header({ active, contact, setContact }) {
                 transition={{ delay: 0.4 }}
                 href="https://www.facebook.com/profile.php?id=100095567229744"
                 target="_blank"
-                className="capitalize hover:text-pinkPrimary flex justify-center items-center w-8 transition-[font-size] h-8 text-3xl hover:text-2xl"
+                className="capitalize mr-4 hover:text-pinkPrimary flex justify-center items-center w-8 transition-[font-size] h-8 text-3xl hover:text-2xl"
               >
                 <FaFacebook color="#A08CE8" />
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                href="https://www.linkedin.com/company/purpled-minds/?fbclid=IwAR2l0AKjujd804vAIVfYu1YZfeCrAokqE6k0D0IWt8o0p1Ba_7Ml0MwHWZM"
+                target="_blank"
+                className="capitalize mr-4 hover:text-pinkPrimary flex justify-center items-center w-8 transition-[font-size] h-8 text-3xl hover:text-2xl"
+              >
+                <FaLinkedinIn color="#A08CE8" />
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+                href="https://www.tiktok.com/@purpleminds6?_t=8fUwWrl0JEh&_r=1&fbclid=IwAR3N-g2lCl0PKbk_LFPWDdVwNL_qjBVFJEgTXlHprBMLQFyFHkm0tjhvdww"
+                target="_blank"
+                className="capitalize hover:text-pinkPrimary flex justify-center items-center w-8 transition-[font-size] h-8 text-3xl hover:text-2xl"
+              >
+                <FaTiktok color="#A08CE8" />
               </motion.a>
             </div>
           </div>
