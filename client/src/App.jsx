@@ -34,6 +34,7 @@ function App() {
             />
           }
         />
+        <Route path="/email" />
       </Routes>
     </div>
   );
