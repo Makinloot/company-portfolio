@@ -4,6 +4,8 @@ import About from "./pages/About";
 import Header from "./components/header/Header";
 import { useState } from "react";
 import ServicesPage from "./pages/ServicesPage";
+import Auth from "./pages/Auth";
+import ControlPanel from "./pages/ControlPanel";
 function App() {
   const [showContact, setShowContact] = useState(false);
 
@@ -32,6 +34,14 @@ function App() {
               showContact={showContact}
               setShowContact={setShowContact}
             />
+          }
+        />
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/panel" element={<ControlPanel />} />
+        <Route
+          path="*"
+          element={
+            <Home showContact={showContact} setShowContact={setShowContact} />
           }
         />
       </Routes>

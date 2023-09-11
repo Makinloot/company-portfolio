@@ -3,7 +3,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 
 // authorize user
 async function loginUser(req, res) {
-  console.log("REQ BODY", req.body);
+  // console.log("REQ BODY", req.body);
   try {
     const { email, password } = req.body;
     await signInWithEmailAndPassword(auth, email, password);
